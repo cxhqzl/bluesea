@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="top.cxh.bluesea.controller.IndexViewController">
+   <left>
+      <BorderPane prefWidth="300.0" BorderPane.alignment="CENTER">
+         <top>
+            <AnchorPane prefHeight="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="myImage" fitHeight="60.0" fitWidth="60.0" layoutX="31.0" layoutY="20.0" onMouseClicked="#mouseClickMyImage" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/image.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="showMyName" layoutX="119.0" layoutY="26.0" maxWidth="150.0" minWidth="50.0" text="CXlllllllllllllpooolllH">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="119.0" layoutY="58.0" text="账号:">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="showMyAccount" layoutX="156.0" layoutY="58.0" minWidth="50.0" prefHeight="18.0" prefWidth="120.0" text="cxh123456722222289">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <BorderPane BorderPane.alignment="CENTER">
+               <top>
+                  <AnchorPane focusTraversable="true" prefHeight="50.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <TextField fx:id="textSearch" layoutX="33.0" layoutY="12.0" prefHeight="23.0" prefWidth="223.0" promptText="搜索好友" style="-fx-background-color: #d3d1d1;" />
+                     </children>
+                  </AnchorPane>
+               </top>
+               <center>
+                  <ScrollPane fx:id="friendSCP" prefHeight="600.0" prefWidth="300.0" styleClass="edge-to-edge" BorderPane.alignment="CENTER">
+                     <content>
+                        <VBox fx:id="friendVBox" prefWidth="280.0" />
+                     </content>
+                  </ScrollPane>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </left>
+   <center>
+      <BorderPane prefWidth="600.0" BorderPane.alignment="CENTER">
+         <center>
+            <BorderPane BorderPane.alignment="CENTER">
+               <bottom>
+                  <BorderPane prefHeight="200.0" BorderPane.alignment="CENTER">
+                     <top>
+                        <AnchorPane prefHeight="30.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <ImageView fx:id="emoj" fitHeight="20.0" fitWidth="20.0" layoutX="14.0" layoutY="6.0" onMouseClicked="#emojClickAction" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/emoj.png" />
+                                 </image>
+                              </ImageView>
+                           </children></AnchorPane>
+                     </top>
+                     <bottom>
+                        <AnchorPane prefHeight="40.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button fx:id="btnSend" layoutX="523.0" layoutY="7.0" mnemonicParsing="false" onAction="#actionSendMsg" prefHeight="27.0" prefWidth="70.0" style="-fx-background-color: #55a3ec;" text="发   送" />
+                           </children>
+                        </AnchorPane>
+                     </bottom>
+                     <center>
+                        <TextArea fx:id="textMsg" wrapText="true" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </BorderPane.margin></TextArea>
+                     </center>
+                  </BorderPane>
+               </bottom>
+               <center>
+                  <ScrollPane fx:id="msgSCP" prefHeight="400.0" prefWidth="600.0" styleClass="edge-to-edge" BorderPane.alignment="CENTER">
+                     <content>
+                        <VBox fx:id="msgVBox" prefWidth="580.0" />
+                     </content>
+                  </ScrollPane>
+               </center>
+            </BorderPane>
+         </center>
+         <top>
+            <AnchorPane prefHeight="50.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="showFriendName" layoutX="25.0" layoutY="20.0" text="大海">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </center>
+</BorderPane>
